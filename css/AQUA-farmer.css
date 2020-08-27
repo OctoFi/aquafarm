@@ -1,0 +1,427 @@
+body {
+  background-color: #f0e7ea;
+  font-family: Nunito, sans-serif;
+  color: #aa8592;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #5b2639;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #5b2639;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+h4 {
+  margin-top: 42px;
+  margin-bottom: 55px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.body {
+  background-color: #f0e7ea;
+}
+
+.footer {
+  position: absolute;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 950px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.container.header-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1200px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.container.flex-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.footer-link {
+  padding-right: 16px;
+  padding-left: 16px;
+  color: #aa8592;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.brand {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #5b2639;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 37px;
+  margin-right: 10px;
+}
+
+.heading {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.button {
+  padding: 1px 24px;
+  border-width: 1px;
+  border-color: #d1004b;
+  border-radius: 12px;
+  background-color: #f0e7ea;
+  box-shadow: 4px 4px 12px 0 #e2cfd5;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #d1004b;
+  font-size: 16px;
+  line-height: 56px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+}
+
+.button:hover {
+  background-color: #f8f3f5;
+}
+
+.button.card-button {
+  position: relative;
+  top: auto;
+  width: 100%;
+  height: 56px;
+  margin-top: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.button.pop-up-button {
+  position: relative;
+  top: auto;
+  width: 100%;
+  height: 56px;
+  margin-top: 48px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: #7f4a5d;
+  font-weight: 700;
+}
+
+.page-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.header-button {
+  padding: 1px 16px;
+  border-width: 1px;
+  border-color: #d1004b;
+  border-radius: 12px;
+  background-color: #f0e7ea;
+  box-shadow: 3px 3px 8px 0 #e2cfd5;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #d1004b;
+  font-size: 12px;
+  line-height: 36px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+}
+
+.header-button:hover {
+  background-color: #f8f3f5;
+}
+
+.flex-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.one-third {
+  width: 31.5%;
+}
+
+.farm-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 516px;
+  min-height: 370px;
+  margin-top: 24px;
+  padding: 24px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid #f8f3f5;
+  border-radius: 10px;
+  background-color: #f0e7ea;
+  box-shadow: 0 0 0 1px #e2cfd5;
+  color: #895669;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 300;
+  text-align: center;
+}
+
+.farm-card-image-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80px;
+  height: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: #f4eef1;
+  box-shadow: 2px 2px 10px 0 rgba(233, 218, 223, 0.63), inset 5px 5px 12px 0 #e5d3d9;
+}
+
+.image {
+  width: 39px;
+}
+
+.subtitle {
+  margin-bottom: 24px;
+}
+
+.large-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.farm-card-emoji {
+  padding-top: 5px;
+  font-size: 36px;
+  line-height: 100%;
+}
+
+.pop-up-overlay {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(91, 38, 57, 0.67);
+}
+
+.half-width {
+  width: 49%;
+}
+
+.pop-up-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 516px;
+  margin-top: 44px;
+  padding: 24px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid #f8f3f5;
+  border-radius: 10px;
+  background-color: #f0e7ea;
+  box-shadow: 0 0 0 1px #e2cfd5;
+  color: #895669;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 300;
+  text-align: center;
+}
+
+.dark-text {
+  color: #5a2739;
+}
+
+.pop-up-wrapper {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .one-third {
+    width: 100%;
+  }
+  .farm-card {
+    margin-right: auto;
+    margin-left: auto;
+    max-width:330px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .container.no-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .heading {
+    display: none;
+    margin-top: 0px;
+  }
+  .button.pop-up-button {
+    margin-top: 24px;
+  }
+  .flex-wrapper {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+  .flex-wrapper.pop-up-flex {
+    display: block;
+    overflow: scroll;
+    height: 100%;
+    max-height: 50vh;
+  }
+  .pop-up-overlay {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+  .half-width {
+    width: 100%;
+    height: 100%;
+  }
+  .pop-up-card {
+    margin-top: 10px;
+  }
+  .heading-2 {
+    margin-top: 21px;
+    margin-bottom: 27.5px;
+  }
+}
+
