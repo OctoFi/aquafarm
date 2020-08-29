@@ -1,5 +1,5 @@
 body {
-  background-color: #f0e7ea;
+  background-color: #fff;
   font-family: Nunito, sans-serif;
   color: #aa8592;
   font-size: 14px;
@@ -57,6 +57,7 @@ h4 {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 
 .container {
   width: 100%;
@@ -176,6 +177,7 @@ h4 {
   font-weight: 700;
 }
 
+
 .page-wrapper {
   position: relative;
   display: -webkit-box;
@@ -200,6 +202,8 @@ h4 {
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  background: url(background-hero.svg) no-repeat center; 
+  background-size: cover; 
 }
 
 .header-button {
@@ -423,5 +427,38 @@ h4 {
     margin-top: 21px;
     margin-bottom: 27.5px;
   }
+
+  /* Menu */
+  
+  #form_main{
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    margin-top: 13px;
+}
+.table {
+table-layout: auto;
+}
+#token_allocate{
+    line-height: 25px;
+    padding: 10px;
+}
+#counter{
+    margin: 20px;
+}
+#period{
+    margin-top: 18px;
+}
+.counter_bold{
+    padding-top: 8px;
+    font-size: 25px;
+}
+.button_center{
+    text-align: center;
+}
+.monthsVariation{
+    padding-left: 26%;
+}
 }
 
