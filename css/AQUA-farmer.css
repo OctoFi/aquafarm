@@ -431,11 +431,11 @@ h4 {
   /* Menu */
   
   #form_main{
-    width: 600px;
+    width: auto;
     margin: auto;
     padding: 20px;
-    background-color: white;
     margin-top: 13px;
+     
 }
 .table {
 table-layout: auto;
@@ -458,7 +458,7 @@ table-layout: auto;
     text-align: center;
 }
 .monthsVariation{
-    padding-left: 26%;
+   /* padding-left: 26%;*/
 }
 }
 
