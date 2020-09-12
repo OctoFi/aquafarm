@@ -74,7 +74,7 @@
           <div class="row" id="counter">
                <strong class="dark-text">Enter OCTO Amount</strong>
               <div style="display:inline-block;" class="col-lg-6" st>
-                 <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}"  oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');" name="token-allocate" id="token_allocate"  oninput="calculateMonthProfit()" min="0" autofocus value="100" />
+			  <input type="number" name="token-allocate" id="token_allocate"  oninput="calculateMonthProfit()" min="0" autofocus value="100" onkeydown="if(event.key==='.'){event.preventDefault();}"/>
               </div></br></br>
               <div style="display:inline-block; padding-right: 20%;" class="col-lg-3">
                 <label for="">Return p.a</label>
