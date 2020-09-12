@@ -1,10 +1,12 @@
 
-
 /* tslint:disable:no-unused-variable */
 var account;
 
+
+
 const connect = async () => {
   // Modern dapp browsers...
+
 
   if (window.ethereum) {
     window.web3 = new Web3(ethereum);
@@ -52,7 +54,7 @@ const connect = async () => {
     console.log("Account: 1 " + account);
     web3.eth.defaultAccount = account;
     document.getElementById("btn-container").innerHTML =
-      "<button id = 'lock-token' class = 'btn btn-primary'>Lock Token</button>";
+      "<button id = 'lock-token' class = 'button card-button w-button'>Lock Token</button>";
     document.getElementById("lock-token").addEventListener("click", monthCheck);
     // document.getElementById("btnchange").setAttribute("id", "lockToken");
   });
@@ -61,7 +63,7 @@ const connect = async () => {
 // ABI Code of YeildContract
 
 function myFunction() {
-  tokenAbi =  [
+  tokenAbi = [
     {
       "constant": true,
       "inputs": [],
@@ -330,10 +332,9 @@ function myFunction() {
       "type": "event"
     }
   ];
-  // tokenAddress = "0xff43d98e3fea2fe006901bf310b2fbf38443ffc4";
-  tokenAddress =  "0x7240aC91f01233BaAf8b064248E80feaA5912BA3";
+  tokenAddress = "0x7240aC91f01233BaAf8b064248E80feaA5912BA3";
 
-  yieldAbi =[
+  yieldAbi = [
     {
       "constant": false,
       "inputs": [],
@@ -730,9 +731,8 @@ function myFunction() {
     }
   ];
 
-  // yieldAddress = "0x4805899d27a0872E265400762eD0ecEc71A63c13";
-  yieldAddress =  "0x0A4E9F69F5B2E1e661da9Ed98956f928200ea4Ba"
-  
+  yieldAddress = "0x0A4E9F69F5B2E1e661da9Ed98956f928200ea4Ba"
+
 
   tokenContract = new web3.eth.Contract(tokenAbi, tokenAddress);
   yieldContract = new web3.eth.Contract(yieldAbi, yieldAddress);
@@ -745,68 +745,82 @@ web3.eth.getAccounts(function (err, accounts) {
     return;
   }
   if (accounts.length == 0) {
-    // alert(
-    //   "No account found! Make sure the Ethereum client is configured properly."
-    // );
+
     return;
   }
   account = accounts[0];
   document.getElementById("exampleInputAddress").value = account;
   console.log("Account: 2 " + account);
   web3.eth.defaultAccount = account;
+
 });
 
 //To load smart contract on loading page
 
 async function monthCheck(e) {
-  var x = ethers.utils.formatEther(5);
-  
+  // var x = ethers.utils.formatEther(5);
+
   e.preventDefault();
   var valueRange = Number(document.getElementById("period").value);
   console.log(valueRange);
   var inputToken = Number(document.getElementById("token_allocate").value);
   console.log(inputToken);
 
-  // web3 = require('web3');
-//   function fx(n) {
-//     // return new web3.utils.BN(n.toString(), ether);
-//     return new web3.utils.BN(web3.utils.toWei(n.toString(), 'ether'));
-//   }
-  
-//   function Boolean(n) {
-//     return new web3.utils.BN(n).toString();
-//   }
-// // console.log("5 ether ", fx(5))
+  inputToken = await web3.utils.toWei(inputToken.toString(), 'ether');
+  var ether1 = await web3.utils.toWei('1', 'ether');
 
-// inputToken = await fx(inputToken);// inputToken * 1e18;
-// inputToken = inputToken.toString();
-    document.getElementById("loader").style.display = "block";
-    document.getElementById("loader").style.visibility = "visible";
-  
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("loader").style.visibility = "visible";
 
-// inputToken = await web3.eth.
-  console.log("Input ",inputToken);
+
+  // inputToken = await web3.eth.
+  console.log("Input ", inputToken);
   await tokenContract.methods
-  .approve(yieldAddress, 500000)
-  .send({ from: account, gas: 2100000 });
-  
-  //   });
-  
-  document.getElementById("loader").style.visibility = "hidden";
+    .approve(yieldAddress, inputToken)
+    .send({ from: account, gas: 2100000 });
+
+
+  var div = document.getElementById('alertMsg');
+
+  div.innerHTML += inputToken / ether1, "  Tokens";
+
   if (valueRange == 1) {
-  await   yieldContract.methods
-       .deposit3m(account, inputToken)
+    await yieldContract.methods
+      .deposit3m(account, inputToken)
       .send({ from: account, gas: 2100000 });
+
+    document.getElementById("loader").style.visibility = "hidden";
+    div.style.display = "block";
+    div.style.visibility = "visible";
+    $("#alertMsg").fadeIn('slow', function () {
+      $(this).delay(3000).fadeOut('slow');
+    });
   } else if (valueRange == 2) {
- await yieldContract.methods
+    await yieldContract.methods
       .deposit6m(account, inputToken)
       .send({ from: account, gas: 2100000 });
+
+    document.getElementById("loader").style.visibility = "hidden";
+    div.style.display = "block";
+    div.style.visibility = "visible";
+    $("#alertMsg").fadeIn('slow', function () {
+      $(this).delay(3000).fadeOut('slow');
+    });
+
   } else {
 
-   await yieldContract.methods
+    await yieldContract.methods
       .deposit12m(account, inputToken)
       .send({ from: account, gas: 2100000 });
+
+    document.getElementById("loader").style.visibility = "hidden";
+
+    div.style.display = "block";
+    div.style.visibility = "visible";
+    $("#alertMsg").fadeIn('slow', function () {
+      $(this).delay(3000).fadeOut('slow');
+    });
   }
- 
+
 }
 

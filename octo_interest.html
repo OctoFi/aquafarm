@@ -24,9 +24,9 @@
   <link href="css/components.css" rel="stylesheet" type="text/css">
   <link href="css/AQUA-farmer.css" rel="stylesheet" type="text/css">
 
-  <script src="js/index.js"></script>
+  <script src="js/index3.js"></script>
   <script src="js/web3/dist/web3.min.js"></script>
-
+  <link rel="stylesheet" href ="./css/loader.css">
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -74,7 +74,7 @@
           <div class="row" id="counter">
                <strong class="dark-text">Enter OCTO Amount</strong>
               <div style="display:inline-block;" class="col-lg-6" st>
-                <input type="number" name="token-allocate" id="token_allocate"  oninput="calculateMonthProfit()" min="0" autofocus value="100" />
+                 <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}"  oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');" name="token-allocate" id="token_allocate"  oninput="calculateMonthProfit()" min="0" autofocus value="100" />
               </div></br></br>
               <div style="display:inline-block; padding-right: 20%;" class="col-lg-3">
                 <label for="">Return p.a</label>
@@ -135,7 +135,10 @@
               <!-- <button type="button"  id="lock" onclick="monthCheck()"  class="btn btn-primary">Lock Tokens</button> -->
               <br><br>
             </div>
+			<div class="loader"  id="loader" style="visibility: hidden"></div>
+  <div class="alertMsg" id="alertMsg" style="visibility: hidden">Congratulations! You have successfully Locked $OCTO= </div>
           </form>
+		 
             <div class="flex-wrapper pop-up-flex">
              </div>
     </div>
@@ -161,7 +164,9 @@
               </div>
             </div><a href="#" class="button pop-up-button w-button" onclick="toggle()">Cancel</a></div>
         </div>
+		
       </div>
+	   
       <script>
     function toggle() {
       var c = document.getElementById("pop-up");

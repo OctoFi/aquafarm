@@ -1,6 +1,7 @@
 var _totalPA1;
 
 function acreturnPA() {
+  console.log("acreturn PA hey")
   var monthSelection = Number(document.getElementById("period").value);
 
   console.log(monthSelection);
@@ -11,6 +12,7 @@ function acreturnPA() {
       _totalPA1 = _rPA1 + _bPA1;
       document.getElementById("return_pa").innerHTML = "+" + _rPA1 + "%";
       document.getElementById("bonus").innerHTML = "+" + _bPA1 + "%";
+      console.log("Case 1 called")
       break;
     case 2:
       var _rPA2 = 1 * 15;
@@ -18,6 +20,8 @@ function acreturnPA() {
       var _totalPA2 = _rPA2 + _bPA2;
       document.getElementById("return_pa").innerHTML = "+" + _rPA2 + "%";
       document.getElementById("bonus").innerHTML = "+" + _bPA2 + "%";
+      console.log("Case 2 called")
+
       break;
 
     default:
@@ -26,11 +30,15 @@ function acreturnPA() {
       var _totalPA3 = _rPA3 + _bPA3;
       document.getElementById("return_pa").innerHTML = "+" + _rPA3 + "%";
       document.getElementById("bonus").innerHTML = "+" + _bPA3 + "%";
+      console.log("Case default called")
+
       break;
   }
 }
 
 function calculateMonthProfit() {
+  console.log("Case calculateMonthProfit called")
+
   const inputUser = Number(document.getElementById("token_allocate").value);
   var _3monSimple = Number((inputUser / 100) * 12.5);
   var _6monSimple = Number((inputUser / 100) * 20);
