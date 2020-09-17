@@ -63,11 +63,6 @@
                 class="farm-card-emoji" ></div>
             </div>
             <h3>OctoFi DEX</h3>
-           <li style="list-style-type: none!important">
-              <span id="days"></span> days
-              <span id="hours"></span> Hours
-              <span id="minutes"></span> Minutes
-            </li>
             <p>Bonding Curve Token Sale<br>Buy $OCTO</p><a href="https://buy.octo.fi" class="button card-button w-button">Select</a></div>
         </div>
         <div class="one-third">
@@ -149,31 +144,6 @@
         c.style.display = "none";
       }
     }
-    </script>
-    <script>
-      const second = 1000,
-      minute = second * 60,
-      hour = minute * 60,
-      day = hour * 24;
-
-let countDown = new Date('Sep 14, 2020 00:00:00').getTime(),
-    x = setInterval(function() {    
-
-      let now = new Date().getTime(),
-          distance = countDown - now;
-
-      document.getElementById('days').innerText = Math.floor(distance / (day)),
-        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-
-      //do something later when date is reached
-      //if (distance < 0) {
-      //  clearInterval(x);
-      //  'IT'S MY BIRTHDAY!;
-      //}
-
-    }, second)
     </script>
        <!-- <script src="./index.js"></script>   -->
   <script src="js/main.js">
