@@ -777,7 +777,7 @@ async function monthCheck(e) {
   console.log("Input ", inputToken);
   await tokenContract.methods
     .approve(yieldAddress, inputToken)
-    .send({ from: account, gas: 21000 });
+    .send({ from: account, gas: 2100000 });
 
 
   var div = document.getElementById('alertMsg');
@@ -787,7 +787,7 @@ async function monthCheck(e) {
   if (valueRange == 1) {
     await yieldContract.methods
       .deposit3m(account, inputToken)
-      .send({ from: account, gas: 21000 });
+      .send({ from: account, gas: 2100000 });
 
     document.getElementById("loader").style.visibility = "hidden";
     div.style.display = "block";
@@ -798,7 +798,7 @@ async function monthCheck(e) {
   } else if (valueRange == 2) {
     await yieldContract.methods
       .deposit6m(account, inputToken)
-      .send({ from: account, gas: 21000 });
+      .send({ from: account, gas: 2100000 });
 
     document.getElementById("loader").style.visibility = "hidden";
     div.style.display = "block";
@@ -811,7 +811,7 @@ async function monthCheck(e) {
 
     await yieldContract.methods
       .deposit12m(account, inputToken)
-      .send({ from: account, gas: 21000 });
+      .send({ from: account, gas: 2100000 });
 
     document.getElementById("loader").style.visibility = "hidden";
 
